@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Novatex Nova Casa · Moda feminina, juvenil e enxoval em Inhapim/MG</title>
+<meta name="description" content="Moda feminina, juvenil e cama, mesa e banho selecionados peça por peça. Provador aberto na loja em Inhapim/MG e atendimento por consultora no WhatsApp.">
+<meta name="theme-color" content="#8B5443">
+
+<!-- ==========================================================================
+     NOVATEX NOVA CASA — landing page de vendas
+     Dados confirmados: endereço, telefone fixo, Instagram, nota do Google (4,3),
+     WhatsApp da loja e das 3 consultoras.
+     >>> A CONFIRMAR COM A LOJA antes de publicar:
+       1. Horário completo de funcionamento (só sabemos que abre seg. às 07:45)
+       2. Área de entrega, prazo e frete
+       3. Formas de pagamento / parcelamento
+       4. Política de troca
+       5. CNPJ para o rodapé
+     ========================================================================== -->
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Novatex Nova Casa · Inhapim/MG">
+<meta property="og:description" content="Moda feminina, juvenil e enxoval com curadoria semanal. Provador na loja e atendimento por consultora.">
+<meta property="og:image" content="assets/img/look-tricot-cru.jpg">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="icon" type="image/png" sizes="256x256" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ============================ INTRO ============================
+     Mesmo padrão dos outros sites: overlay com a logo entrando, barra de
+     progresso e saída em fade. Só aparece com JS ativo (regra .js no CSS),
+     então nunca cobre o conteúdo se o script falhar. -->
+<div class="intro" id="intro" aria-hidden="true">
+  <span class="intro__glow"></span>
+  <img class="intro__logo" src="assets/img/logo-novatex.png" alt="" width="360" height="210">
+  <span class="intro__bar"><i></i></span>
+  <p class="intro__sub">Nova Casa · Inhapim MG</p>
+</div>
+
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <button class="nav__burger" id="burger" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu">
+      <span></span><span></span>
+    </button>
+
+    <nav class="nav__links" aria-label="Navegação principal">
+      <a href="#colecoes">Coleções</a>
+      <a href="#casa">Enxoval</a>
+      <a href="#vitrine">Vitrine</a>
+      <a href="#loja">A loja</a>
+    </nav>
+
+    <a class="nav__brand" href="#top" aria-label="Novatex Nova Casa — início">
+      <img class="logo logo--nav" src="assets/img/logo-novatex.png" alt="Novatex Nova Casa" width="360" height="210">
+    </a>
+
+    <a class="btn btn--wa btn--sm nav__cta"
+       href="https://wa.me/5533991040240?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Novatex%20e%20quero%20atendimento."
+       target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9.9 9.9 0 0 0-8.5 15L2 22l5.2-1.4A9.9 9.9 0 1 0 12 2Z"/><path d="M8.6 7.6c.3-.1.7 0 .9.4l.8 1.4c.2.3.1.6-.1.9l-.5.6c-.2.2-.2.4-.1.6.5 1 1.4 1.9 2.4 2.4.2.1.5.1.6-.1l.6-.5c.3-.2.6-.3.9-.1l1.4.8c.4.2.5.6.4.9-.3.9-1.2 1.5-2.2 1.4-2.9-.3-5.6-3-5.9-5.9-.1-1 .5-1.9 1.4-2.2Z" fill="currentColor" stroke="none"/></svg>
+      <span class="nav__cta-txt">Falar no WhatsApp</span>
+    </a>
+  </div>
+
+  <div class="nav__mobile" id="menu-mobile" hidden>
+    <a href="#colecoes">Coleções</a>
+    <a href="#casa">Enxoval</a>
+    <a href="#vitrine">Vitrine</a>
+    <a href="#consultoras">Consultoras</a>
+    <a href="#loja">A loja</a>
+    <a href="#faq">Dúvidas</a>
+  </div>
+</header>
+
+<main id="conteudo">
+<span id="top"></span>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="hero__aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="hero__grain" aria-hidden="true"></div>
+
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow reveal">
+        <span class="eyebrow__dot" aria-hidden="true"></span>
+        Inhapim · Minas Gerais
+      </p>
+
+      <h1 class="hero__title reveal" data-reveal-delay="1">
+        Vista você.<br>
+        <em>Vista sua casa.</em>
+      </h1>
+
+      <p class="hero__lead reveal" data-reveal-delay="2">
+        Moda feminina, juvenil e cama, mesa e banho escolhidos peça por peça.
+        Curadoria nova toda semana, provador aberto na loja e uma consultora
+        que atende você pelo nome — não por senha.
+      </p>
+
+      <div class="hero__actions reveal" data-reveal-delay="3">
+        <a class="btn btn--wa btn--lg"
+           href="https://wa.me/5533991040240?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Novatex%20e%20quero%20ver%20as%20novidades%20da%20semana."
+           target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9.9 9.9 0 0 0-8.5 15L2 22l5.2-1.4A9.9 9.9 0 1 0 12 2Z"/><path d="M8.6 7.6c.3-.1.7 0 .9.4l.8 1.4c.2.3.1.6-.1.9l-.5.6c-.2.2-.2.4-.1.6.5 1 1.4 1.9 2.4 2.4.2.1.5.1.6-.1l.6-.5c.3-.2.6-.3.9-.1l1.4.8c.4.2.5.6.4.9-.3.9-1.2 1.5-2.2 1.4-2.9-.3-5.6-3-5.9-5.9-.1-1 .5-1.9 1.4-2.2Z" fill="currentColor" stroke="none"/></svg>
+          Ver novidades no WhatsApp
+        </a>
+        <a class="btn btn--ghost btn--lg" href="#colecoes">Explorar coleções</a>
+      </div>
+
+      <div class="hero__proof reveal" data-reveal-delay="4">
+        <div class="proof">
+          <span class="proof__stars" aria-hidden="true">★★★★<span class="proof__half">★</span></span>
+          <span><strong>4,3</strong> no Google</span>
+        </div>
+        <div class="proof proof--plain">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          R. Alberto Azevedo, 45
+        </div>
+      </div>
+    </div>
+
+    <!-- CARROSSEL DE NOVIDADES -->
+    <div class="carousel reveal" id="carousel" data-reveal-delay="3"
+         aria-roledescription="carrossel" aria-label="Novidades da semana">
+      <div class="carousel__frame">
+        <ul class="carousel__track">
+          <li class="cslide is-active">
+            <img src="assets/img/look-tricot-cru.jpg" alt="Look com tricot cru de gola polo e calça marrom" width="900" height="1200" decoding="async">
+            <div class="cslide__cap"><span>Moda feminina</span><strong>Tricot &amp; alfaiataria</strong></div>
+          </li>
+          <li class="cslide">
+            <img src="assets/img/look-vestido-listrado.jpg" alt="Vestido longo listrado preto e cru com fenda" width="930" height="1200" loading="lazy" decoding="async">
+            <div class="cslide__cap"><span>Vestidos</span><strong>Listrado longo</strong></div>
+          </li>
+          <li class="cslide">
+            <img src="assets/img/look-alfaiataria.jpg" alt="Conjunto de alfaiataria preto com blusa peplum e calça pantalona" width="1440" height="1920" loading="lazy" decoding="async">
+            <div class="cslide__cap"><span>Alfaiataria</span><strong>Peplum &amp; pantalona</strong></div>
+          </li>
+          <li class="cslide">
+            <img src="assets/img/look-sueter-close.jpg" alt="Suéter marrom de gola alta com jacquard étnico" width="960" height="1280" loading="lazy" decoding="async">
+            <div class="cslide__cap"><span>Inverno</span><strong>Suéter jacquard</strong></div>
+          </li>
+          <li class="cslide">
+            <img src="assets/img/look-polo-jeans.jpg" alt="Look com camisa polo azul-marinho e jeans reto claro" width="720" height="960" loading="lazy" decoding="async">
+            <div class="cslide__cap"><span>Básicos</span><strong>Polo malha &amp; jeans</strong></div>
+          </li>
+          <li class="cslide">
+            <img src="assets/img/look-vestido-couro.jpg" alt="Vestido curto preto em couro ecológico com lenço estampado" width="720" height="960" loading="lazy" decoding="async">
+            <div class="cslide__cap"><span>Para a noite</span><strong>Couro eco</strong></div>
+          </li>
+          <li class="cslide">
+            <img src="assets/img/casa-jogo-toalha.jpg" alt="Jogo de toalhas felpudas cinza e branco com barra bordada" width="750" height="1334" loading="lazy" decoding="async">
+            <div class="cslide__cap"><span>Enxoval</span><strong>Jogo de toalha</strong></div>
+          </li>
+          <li class="cslide">
+            <img src="assets/img/juvenil-vestido.jpg" alt="Menina usando vestido juvenil off-white com detalhes bordados" width="1320" height="2346" loading="lazy" decoding="async">
+            <div class="cslide__cap"><span>Juvenil</span><strong>Vestido bordado</strong></div>
+          </li>
+        </ul>
+
+        <button class="carousel__nav carousel__nav--prev" id="c-prev" aria-label="Peça anterior">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <button class="carousel__nav carousel__nav--next" id="c-next" aria-label="Próxima peça">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+
+        <div class="carousel__bar" aria-hidden="true"><i id="c-bar"></i></div>
+      </div>
+
+      <div class="carousel__foot">
+        <p class="carousel__count"><strong id="c-index">01</strong><span>/</span><span id="c-total">08</span></p>
+        <div class="carousel__dots" id="c-dots"></div>
+      </div>
+
+      <p class="carousel__live" aria-live="polite" id="c-live"></p>
+    </div>
+  </div>
+
+  <a class="hero__scroll" href="#colecoes" aria-label="Rolar para coleções">
+    <span></span>
+  </a>
+</section>
+
+<!-- ============================ MARQUEE ============================ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Provador aberto na loja</span><i>✦</i>
+    <span>Atendimento por consultora</span><i>✦</i>
+    <span>Novidades toda semana</span><i>✦</i>
+    <span>Cama, mesa e banho</span><i>✦</i>
+    <span>Moda feminina &amp; juvenil</span><i>✦</i>
+    <span>Entrega combinada no WhatsApp</span><i>✦</i>
+    <span>Provador aberto na loja</span><i>✦</i>
+    <span>Atendimento por consultora</span><i>✦</i>
+    <span>Novidades toda semana</span><i>✦</i>
+    <span>Cama, mesa e banho</span><i>✦</i>
+    <span>Moda feminina &amp; juvenil</span><i>✦</i>
+    <span>Entrega combinada no WhatsApp</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ============================ COLEÇÕES ============================ -->
+<section class="section" id="colecoes">
+  <div class="wrap">
+    <header class="s-head">
+      <p class="eyebrow reveal"><span class="eyebrow__dot" aria-hidden="true"></span>Coleções</p>
+      <h2 class="s-title reveal" data-reveal-delay="1">Quatro mundos,<br><em>a mesma curadoria.</em></h2>
+      <p class="s-lead reveal" data-reveal-delay="2">
+        A Novatex nasceu de tecido e cresceu virando guarda-roupa e casa.
+        Escolha por onde começar.
+      </p>
+    </header>
+
+    <div class="bento">
+      <a class="tile tile--tall reveal" href="#vitrine" data-reveal-delay="1">
+        <img src="assets/img/look-vestido-listrado.jpg" alt="Vestido longo listrado preto e cru com fenda" loading="lazy" decoding="async">
+        <div class="tile__body">
+          <span class="tile__tag">01</span>
+          <h3>Moda Feminina</h3>
+          <p>Tricot, alfaiataria, jeans e vestidos que resolvem o dia inteiro.</p>
+          <span class="tile__link">Ver vitrine <i aria-hidden="true">→</i></span>
+        </div>
+      </a>
+
+      <a class="tile reveal" href="#casa" data-reveal-delay="2">
+        <img src="assets/img/casa-jogo-colcha.jpg" alt="Jogo de colcha queen branco com acabamento matelassê sobre cama arrumada" loading="lazy" decoding="async">
+        <div class="tile__body">
+          <span class="tile__tag">02</span>
+          <h3>Cama, Mesa &amp; Banho</h3>
+          <p>Jogos de colcha, toalhas e enxoval de marcas que duram.</p>
+          <span class="tile__link">Ver o enxoval <i aria-hidden="true">→</i></span>
+        </div>
+      </a>
+
+      <a class="tile reveal" href="#casa" data-reveal-delay="3">
+        <img src="assets/img/casa-mantas-roupao.jpg" alt="Quarto com manta azul-marinho na cama e mulher de roupão felpudo azul-claro" loading="lazy" decoding="async">
+        <div class="tile__body">
+          <span class="tile__tag">03</span>
+          <h3>Mantas &amp; Roupão</h3>
+          <p>O inverno mineiro pede conforto que abraça. Aqui tem.</p>
+          <span class="tile__link">Ver o enxoval <i aria-hidden="true">→</i></span>
+        </div>
+      </a>
+
+      <a class="tile tile--wide reveal" href="#consultoras" data-reveal-delay="4">
+        <img src="assets/img/juvenil-vestido.jpg" alt="Menina usando vestido juvenil off-white com detalhes bordados e botas" loading="lazy" decoding="async">
+        <div class="tile__body">
+          <span class="tile__tag">04</span>
+          <h3>Juvenil</h3>
+          <p>Peças com o mesmo cuidado do adulto — só que no tamanho deles.</p>
+          <span class="tile__link">Pedir fotos <i aria-hidden="true">→</i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ENXOVAL ============================ -->
+<section class="section section--dark" id="casa">
+  <div class="wrap">
+    <header class="s-head s-head--center">
+      <p class="eyebrow eyebrow--light reveal"><span class="eyebrow__dot" aria-hidden="true"></span>Cama, mesa e banho</p>
+      <h2 class="s-title reveal" data-reveal-delay="1">A casa também<br><em>merece estreia.</em></h2>
+      <p class="s-lead reveal" data-reveal-delay="2">
+        A Novatex começou vendendo tecido — e é no enxoval que essa história
+        aparece. Toque conferido peça por peça, marca que você conhece de nome.
+      </p>
+    </header>
+
+    <ul class="casa">
+      <li class="casa__item reveal">
+        <div class="casa__img" data-zoom role="button" tabindex="0">
+          <img src="assets/img/casa-jogo-colcha.jpg" alt="Jogo de colcha queen branco matelassê com dois porta-travesseiros" loading="lazy" decoding="async">
+        </div>
+        <h3>Jogo de colcha</h3>
+        <p>Matelassê 100% algodão 200 fios, com dois porta-travesseiros.
+           Queen, na caixa, pronto para presentear.</p>
+      </li>
+
+      <li class="casa__item reveal" data-reveal-delay="1">
+        <div class="casa__img" data-zoom role="button" tabindex="0">
+          <img src="assets/img/casa-jogo-toalha.jpg" alt="Jogo de toalhas felpudas cinza e branco com barra bordada em laise" loading="lazy" decoding="async">
+        </div>
+        <h3>Jogo de toalha</h3>
+        <p>Felpudo pesado com barra bordada. Banho e rosto nos tons neutros
+           que combinam com qualquer banheiro.</p>
+      </li>
+
+      <li class="casa__item reveal" data-reveal-delay="2">
+        <div class="casa__img" data-zoom role="button" tabindex="0">
+          <img src="assets/img/casa-mantas-roupao.jpg" alt="Quarto com manta azul-marinho na cama e mulher de roupão felpudo azul-claro" loading="lazy" decoding="async">
+        </div>
+        <h3>Mantas &amp; roupão</h3>
+        <p>Para o inverno mineiro: manta que abraça e roupão felpudo.
+           Aquece de verdade e ainda fica bonito no sofá.</p>
+      </li>
+    </ul>
+
+    <div class="casa__cta reveal" data-reveal-delay="2">
+      <a class="btn btn--wa btn--lg"
+         href="https://wa.me/5533991040240?text=Ol%C3%A1!%20Quero%20ver%20as%20op%C3%A7%C3%B5es%20de%20enxoval%20%28colcha%2C%20toalha%2C%20manta%29."
+         target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9.9 9.9 0 0 0-8.5 15L2 22l5.2-1.4A9.9 9.9 0 1 0 12 2Z"/><path d="M8.6 7.6c.3-.1.7 0 .9.4l.8 1.4c.2.3.1.6-.1.9l-.5.6c-.2.2-.2.4-.1.6.5 1 1.4 1.9 2.4 2.4.2.1.5.1.6-.1l.6-.5c.3-.2.6-.3.9-.1l1.4.8c.4.2.5.6.4.9-.3.9-1.2 1.5-2.2 1.4-2.9-.3-5.6-3-5.9-5.9-.1-1 .5-1.9 1.4-2.2Z" fill="currentColor" stroke="none"/></svg>
+        Ver opções de enxoval
+      </a>
+      <p>Cores e medidas disponíveis mudam toda semana — a consultora confere na hora.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ VITRINE ============================ -->
+<section class="section" id="vitrine">
+  <div class="wrap">
+    <header class="s-head s-head--row">
+      <div>
+        <p class="eyebrow reveal"><span class="eyebrow__dot" aria-hidden="true"></span>Vitrine da semana</p>
+        <h2 class="s-title reveal" data-reveal-delay="1">Chegou pouco.<br><em>E vai rápido.</em></h2>
+      </div>
+      <p class="s-lead reveal" data-reveal-delay="2">
+        Trabalhamos com grades pequenas de propósito: você não encontra a mesma
+        peça na cidade toda. Mande a foto do que gostou e a consultora confere o
+        tamanho na hora.
+      </p>
+    </header>
+
+    <ul class="grid-looks">
+      <li class="look reveal">
+        <div class="look__img" data-zoom role="button" tabindex="0">
+          <img src="assets/img/look-polo-jeans.jpg" alt="Look com camisa polo azul-marinho e jeans reto claro" loading="lazy" decoding="async">
+          <span class="look__badge">Novo</span>
+        </div>
+        <div class="look__meta">
+          <h3>Polo malha &amp; jeans reto</h3>
+          <p>Básico bem feito</p>
+          <a class="look__cta" href="https://wa.me/5533999543440?text=Ol%C3%A1%2C%20Maria!%20Quero%20saber%20sobre%20a%20polo%20de%20malha%20com%20jeans%20reto%20que%20vi%20no%20site." target="_blank" rel="noopener">Consultar tamanho</a>
+        </div>
+      </li>
+
+      <li class="look reveal" data-reveal-delay="1">
+        <div class="look__img" data-zoom role="button" tabindex="0">
+          <img src="assets/img/look-alfaiataria.jpg" alt="Conjunto de alfaiataria preto com blusa peplum e calça pantalona" loading="lazy" decoding="async">
+        </div>
+        <div class="look__meta">
+          <h3>Conjunto alfaiataria</h3>
+          <p>Peplum + pantalona</p>
+          <a class="look__cta" href="https://wa.me/5533991245204?text=Ol%C3%A1%2C%20M%C3%A1rcia!%20Quero%20saber%20sobre%20o%20conjunto%20de%20alfaiataria%20preto%20que%20vi%20no%20site." target="_blank" rel="noopener">Consultar tamanho</a>
+        </div>
+      </li>
+
+      <li class="look reveal" data-reveal-delay="2">
+        <div class="look__img" data-zoom role="button" tabindex="0">
+          <img src="assets/img/look-sueter-close.jpg" alt="Suéter marrom de gola alta com jacquard étnico em tons de caramelo" loading="lazy" decoding="async">
+          <span class="look__badge">Inverno</span>
+        </div>
+        <div class="look__meta">
+          <h3>Suéter jacquard</h3>
+          <p>Gola alta, lã macia</p>
+          <a class="look__cta" href="https://wa.me/5533998332080?text=Ol%C3%A1%2C%20Vanessa!%20Quero%20saber%20sobre%20o%20su%C3%A9ter%20jacquard%20de%20gola%20alta%20que%20vi%20no%20site." target="_blank" rel="noopener">Consultar tamanho</a>
+        </div>
+      </li>
+
+      <li class="look reveal">
+        <div class="look__img" data-zoom role="button" tabindex="0">
+          <img src="assets/img/look-vestido-couro.jpg" alt="Vestido curto preto em couro ecológico com lenço estampado e bota" loading="lazy" decoding="async">
+        </div>
+        <div class="look__meta">
+          <h3>Vestido couro eco</h3>
+          <p>Para a noite</p>
+          <a class="look__cta" href="https://wa.me/5533991040240?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20vestido%20de%20couro%20eco%20que%20vi%20no%20site." target="_blank" rel="noopener">Consultar tamanho</a>
+        </div>
+      </li>
+
+      <li class="look reveal" data-reveal-delay="1">
+        <div class="look__img" data-zoom role="button" tabindex="0">
+          <img src="assets/img/look-jeans-preto.jpg" alt="Look monocromático com jaqueta camisa e calça jeans preta" loading="lazy" decoding="async">
+        </div>
+        <div class="look__meta">
+          <h3>Total jeans black</h3>
+          <p>Camisa-jaqueta + calça</p>
+          <a class="look__cta" href="https://wa.me/5533991040240?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20look%20total%20jeans%20black%20que%20vi%20no%20site." target="_blank" rel="noopener">Consultar tamanho</a>
+        </div>
+      </li>
+
+      <li class="look reveal" data-reveal-delay="2">
+        <div class="look__img" data-zoom role="button" tabindex="0">
+          <img src="assets/img/casa-jogo-toalha.jpg" alt="Jogo de toalhas felpudas cinza e branco com barra bordada" loading="lazy" decoding="async">
+          <span class="look__badge">Casa</span>
+        </div>
+        <div class="look__meta">
+          <h3>Jogo de toalha bordado</h3>
+          <p>Banho + rosto</p>
+          <a class="look__cta" href="https://wa.me/5533991040240?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20jogo%20de%20toalha%20bordado%20que%20vi%20no%20site." target="_blank" rel="noopener">Consultar cores</a>
+        </div>
+      </li>
+    </ul>
+
+    <p class="vitrine__note reveal">
+      Valores e condições são passados no atendimento — assim você recebe o preço
+      certo do que ainda está disponível.
+    </p>
+  </div>
+</section>
+
+<!-- ============================ REEL ============================ -->
+<section class="section section--platinum" id="reel">
+  <div class="wrap reel">
+    <div class="reel__copy">
+      <p class="eyebrow reveal"><span class="eyebrow__dot" aria-hidden="true"></span>Direto da loja</p>
+      <h2 class="s-title reveal" data-reveal-delay="1">O que entrou<br><em>essa semana.</em></h2>
+      <p class="s-lead reveal" data-reveal-delay="2">
+        A gente mostra tudo antes de ir para a arara. Quem acompanha no Instagram
+        escolhe primeiro — e quem chama no WhatsApp reserva.
+      </p>
+      <div class="reel__actions reveal" data-reveal-delay="3">
+        <a class="btn btn--ghost" href="https://www.instagram.com/novatexinhapim/" target="_blank" rel="noopener">Seguir @novatexinhapim</a>
+        <a class="btn btn--wa" href="https://wa.me/5533991040240?text=Ol%C3%A1!%20Quero%20receber%20as%20novidades%20da%20semana." target="_blank" rel="noopener">Receber novidades</a>
+      </div>
+    </div>
+
+    <div class="reel__frame reveal" data-reveal-delay="2">
+      <video src="assets/video/reel-novatex.mp4" muted loop playsinline autoplay
+             preload="metadata" aria-label="Vídeo com peças da loja Novatex"></video>
+      <div class="reel__glow" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DIFERENCIAIS ============================ -->
+<section class="section" id="porque">
+  <div class="wrap">
+    <header class="s-head s-head--center">
+      <p class="eyebrow reveal"><span class="eyebrow__dot" aria-hidden="true"></span>Por que a Novatex</p>
+      <h2 class="s-title reveal" data-reveal-delay="1">Loja de cidade pequena,<br><em>cuidado de loja grande.</em></h2>
+    </header>
+
+    <ul class="feats">
+      <li class="feat reveal">
+        <svg class="feat__ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 27V11l10-5 10 5v16"/><path d="M12 27v-8h8v8"/><path d="M16 6V3"/></svg>
+        <h3>Provador aberto</h3>
+        <p>Prove com calma, no espelho certo, com alguém que entende de caimento
+           e fala a verdade sobre o seu corpo.</p>
+      </li>
+      <li class="feat reveal" data-reveal-delay="1">
+        <svg class="feat__ico" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="11" r="5"/><path d="M6 28c0-5.5 4.5-10 10-10s10 4.5 10 10"/></svg>
+        <h3>Consultora dedicada</h3>
+        <p>Você escolhe com quem falar e continua com a mesma pessoa. Sem fila,
+           sem robô, sem repetir a história.</p>
+      </li>
+      <li class="feat reveal" data-reveal-delay="2">
+        <svg class="feat__ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 9h24M4 16h24M4 23h16"/><circle cx="26" cy="23" r="2.5"/></svg>
+        <h3>Curadoria semanal</h3>
+        <p>Grades pequenas e reposição constante. É difícil encontrar a mesma
+           peça em outra pessoa na cidade.</p>
+      </li>
+      <li class="feat reveal" data-reveal-delay="3">
+        <svg class="feat__ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 13 16 5l11 8v14H5V13Z"/><path d="M12 27v-7h8v7"/></svg>
+        <h3>Guarda-roupa e casa</h3>
+        <p>Da colcha ao vestido de festa, do jogo de toalha ao uniforme dos
+           filhos. Uma parada, tudo resolvido.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ CONSULTORAS ============================ -->
+<section class="section section--platinum" id="consultoras">
+  <div class="wrap">
+    <header class="s-head s-head--center">
+      <p class="eyebrow reveal"><span class="eyebrow__dot" aria-hidden="true"></span>Atendimento</p>
+      <h2 class="s-title reveal" data-reveal-delay="1">Escolha com quem<br><em>você quer falar.</em></h2>
+      <p class="s-lead reveal" data-reveal-delay="2">
+        Todas atendem moda e casa. Se você já tem alguém de confiança na loja,
+        chame direto por ela.
+      </p>
+    </header>
+
+    <ul class="cons">
+      <li class="con con--store reveal">
+        <span class="con__avatar" aria-hidden="true">N</span>
+        <h3>WhatsApp da Loja</h3>
+        <p>Atendimento geral, entregas e enxoval</p>
+        <a class="btn btn--wa btn--block" href="https://wa.me/5533991040240?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Novatex." target="_blank" rel="noopener">Chamar a loja</a>
+      </li>
+      <li class="con reveal" data-reveal-delay="1">
+        <span class="con__avatar" aria-hidden="true">M</span>
+        <h3>Maria</h3>
+        <p>Consultora de vendas</p>
+        <a class="btn btn--wa-out btn--block" href="https://wa.me/5533999543440?text=Ol%C3%A1%2C%20Maria!%20Vim%20pelo%20site%20da%20Novatex." target="_blank" rel="noopener">Falar com Maria</a>
+      </li>
+      <li class="con reveal" data-reveal-delay="2">
+        <span class="con__avatar" aria-hidden="true">M</span>
+        <h3>Márcia</h3>
+        <p>Consultora de vendas</p>
+        <a class="btn btn--wa-out btn--block" href="https://wa.me/5533991245204?text=Ol%C3%A1%2C%20M%C3%A1rcia!%20Vim%20pelo%20site%20da%20Novatex." target="_blank" rel="noopener">Falar com Márcia</a>
+      </li>
+      <li class="con reveal" data-reveal-delay="3">
+        <span class="con__avatar" aria-hidden="true">V</span>
+        <h3>Vanessa</h3>
+        <p>Consultora de vendas</p>
+        <a class="btn btn--wa-out btn--block" href="https://wa.me/5533998332080?text=Ol%C3%A1%2C%20Vanessa!%20Vim%20pelo%20site%20da%20Novatex." target="_blank" rel="noopener">Falar com Vanessa</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ LOJA ============================ -->
+<section class="section" id="loja">
+  <div class="wrap loja">
+    <div class="loja__copy">
+      <p class="eyebrow reveal"><span class="eyebrow__dot" aria-hidden="true"></span>Onde estamos</p>
+      <h2 class="s-title reveal" data-reveal-delay="1">No centro de Inhapim,<br><em>de porta aberta.</em></h2>
+
+      <dl class="info reveal" data-reveal-delay="2">
+        <div>
+          <dt>Endereço</dt>
+          <dd>R. Alberto Azevedo, 45<br>Inhapim · MG · 35330-000</dd>
+        </div>
+        <div>
+          <dt>Telefone da loja</dt>
+          <dd><a href="tel:+553333151226">(33) 3315-1226</a></dd>
+        </div>
+        <div>
+          <dt>WhatsApp</dt>
+          <dd><a href="https://wa.me/5533991040240" target="_blank" rel="noopener">(33) 99104-0240</a></dd>
+        </div>
+        <div>
+          <dt>Atendimento</dt>
+          <!-- TODO: substituir pelo horário completo confirmado com a loja -->
+          <dd>Abre segunda-feira às 07:45<br><span class="info__note">confirme o horário do dia no WhatsApp</span></dd>
+        </div>
+      </dl>
+
+      <div class="loja__actions reveal" data-reveal-delay="3">
+        <a class="btn btn--primary btn--lg" href="https://www.google.com/maps/search/?api=1&amp;query=Novatex%2C%20R.%20Alberto%20Azevedo%2C%2045%2C%20Inhapim%20-%20MG" target="_blank" rel="noopener">Abrir no Google Maps</a>
+        <a class="btn btn--ghost btn--lg" href="https://www.instagram.com/novatexinhapim/" target="_blank" rel="noopener">Ver o Instagram</a>
+      </div>
+    </div>
+
+    <figure class="loja__img reveal" data-reveal-delay="2">
+      <img src="assets/img/look-sueter-inverno.jpg" alt="Ambiente da loja com poltronas de madeira e look de suéter jacquard com jeans" loading="lazy" decoding="async">
+      <figcaption>
+        <span class="proof__stars" aria-hidden="true">★★★★<span class="proof__half">★</span></span>
+        <strong>4,3</strong> · 4 avaliações no Google
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="section section--platinum" id="faq">
+  <div class="wrap wrap--narrow">
+    <header class="s-head s-head--center">
+      <p class="eyebrow reveal"><span class="eyebrow__dot" aria-hidden="true"></span>Dúvidas rápidas</p>
+      <h2 class="s-title reveal" data-reveal-delay="1">Antes de <em>chamar</em></h2>
+    </header>
+
+    <div class="faq reveal" data-reveal-delay="2">
+      <details class="qa" open>
+        <summary>Vocês entregam?</summary>
+        <div class="qa__body"><p>Sim, a loja trabalha com entrega. A área atendida, o prazo e o frete são combinados no atendimento — mande sua localização no WhatsApp que a consultora confirma na hora.</p></div>
+      </details>
+      <details class="qa">
+        <summary>Como funciona o pagamento?</summary>
+        <div class="qa__body"><p>A consultora informa todas as formas disponíveis e as condições de parcelamento antes de você fechar o pedido, sem surpresa no final.</p></div>
+      </details>
+      <details class="qa">
+        <summary>Dá para reservar uma peça que vi no site?</summary>
+        <div class="qa__body"><p>Manda a foto da peça no WhatsApp. Como as grades são pequenas, a consultora verifica se ainda tem o seu tamanho e combina a reserva.</p></div>
+      </details>
+      <details class="qa">
+        <summary>Tem o meu tamanho?</summary>
+        <div class="qa__body"><p>O mix muda toda semana. Diga o tamanho que você usa e o que procura: a consultora confere o que está na loja naquele momento e te manda opções reais, não catálogo.</p></div>
+      </details>
+      <details class="qa">
+        <summary>E se eu não gostar depois de provar em casa?</summary>
+        <div class="qa__body"><p>Fale com a consultora antes de comprar para conhecer o prazo e as condições de troca da loja. Guarde a etiqueta e o comprovante para facilitar.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CTA FINAL ============================ -->
+<section class="cta" id="cta">
+  <div class="wrap wrap--narrow cta__inner">
+    <img class="logo logo--cta logo--dark reveal" src="assets/img/logo-novatex.png"
+         alt="Novatex Nova Casa" width="360" height="210" loading="lazy">
+    <h2 class="reveal" data-reveal-delay="1">Sua próxima peça favorita<br><em>já está na arara.</em></h2>
+    <p class="reveal" data-reveal-delay="1">
+      Mande uma mensagem contando o que você procura. Em minutos você recebe
+      fotos reais do que tem na loja hoje, no seu tamanho.
+    </p>
+    <div class="cta__actions reveal" data-reveal-delay="2">
+      <a class="btn btn--wa btn--lg"
+         href="https://wa.me/5533991040240?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Novatex%20e%20quero%20ver%20o%20que%20tem%20na%20loja%20hoje."
+         target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      <a class="btn btn--ghost-light btn--lg" href="tel:+553333151226">Ligar para a loja</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <div class="foot__brand">
+      <img class="logo logo--foot logo--dark" src="assets/img/logo-novatex.png"
+           alt="Novatex Nova Casa" width="360" height="210" loading="lazy">
+      <p>Moda feminina, juvenil e cama, mesa e banho.<br>Inhapim · Minas Gerais.</p>
+    </div>
+
+    <nav class="foot__col" aria-label="Seções">
+      <h3>Navegar</h3>
+      <a href="#colecoes">Coleções</a>
+      <a href="#casa">Enxoval</a>
+      <a href="#vitrine">Vitrine</a>
+      <a href="#consultoras">Consultoras</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+
+    <div class="foot__col">
+      <h3>Contato</h3>
+      <a href="https://wa.me/5533991040240" target="_blank" rel="noopener">WhatsApp (33) 99104-0240</a>
+      <a href="tel:+553333151226">Telefone (33) 3315-1226</a>
+      <a href="https://www.instagram.com/novatexinhapim/" target="_blank" rel="noopener">@novatexinhapim</a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Novatex%2C%20R.%20Alberto%20Azevedo%2C%2045%2C%20Inhapim%20-%20MG" target="_blank" rel="noopener">R. Alberto Azevedo, 45</a>
+    </div>
+  </div>
+
+  <div class="wrap foot__bottom">
+    <p>© <span id="ano">2026</span> Novatex Nova Casa. Todos os direitos reservados.</p>
+    <p>Imagens das peças: acervo da loja.</p>
+  </div>
+</footer>
+
+<!-- Lightbox das fotos -->
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button class="lightbox__close" type="button" aria-label="Fechar foto">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <figure class="lightbox__fig">
+    <img id="lb-img" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+</div>
+
+<!-- WhatsApp flutuante -->
+<a class="wa-float" href="https://wa.me/5533991040240?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Novatex." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.4 1.7 6.3L3 29l6.9-1.7A13 13 0 1 0 16 3Z"/><path d="M11.4 10.1c.5-.2 1.1 0 1.4.5l1.1 1.9c.3.5.2 1-.2 1.4l-.7.7c-.2.2-.3.6-.1.9a11 11 0 0 0 3.7 3.7c.3.2.6.1.9-.1l.7-.7c.4-.4.9-.5 1.4-.2l1.9 1.1c.5.3.7.9.5 1.4-.5 1.3-1.8 2.1-3.2 1.9-4.3-.5-8.3-4.5-8.8-8.8-.2-1.4.6-2.7 1.9-3.2Z" class="wa-float__glyph"/></svg>
+  <span class="wa-float__label">Fale com a Novatex</span>
+</a>
+
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
