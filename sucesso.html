@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pedido confirmado · Seu Pendrive Atualizado</title>
+<meta name="description" content="Pedido registrado. Você será levado à conversa no WhatsApp para receber o link de download do Repertório Atualizado.">
+<meta name="theme-color" content="#04060C">
+<meta name="robots" content="noindex">
+
+<!-- ==========================================================================
+     PÁGINA DE SUCESSO
+     Recebe o cliente depois do checkout (ou de volta do Mercado Pago),
+     mostra o resumo do pedido e o leva direto para a conversa no WhatsApp,
+     com o pedido escrito na mensagem — é lá que o link de download é enviado.
+
+     Quantos segundos até abrir o WhatsApp sozinho:
+     js/shop-config.js > LOJA.whatsapp.redirecionarEmSegundos
+     ========================================================================== -->
+
+<link rel="icon" type="image/png" href="assets/img/pendrive-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/pendrive.css">
+<link rel="stylesheet" href="css/cart.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="pagina-sucesso">
+
+<div class="sucesso__bg" aria-hidden="true"><span></span><span></span></div>
+
+<main class="sucesso">
+  <div class="wrap wrap--narrow">
+
+    <div class="sucesso__card">
+
+      <span class="sucesso__check" id="suc-ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+      </span>
+
+      <p class="eyebrow eyebrow--ouro" id="suc-eyebrow">
+        <span class="eyebrow__dot" aria-hidden="true"></span>Pedido registrado
+      </p>
+
+      <h1 class="sucesso__titulo" id="suc-titulo">Pedido confirmado!</h1>
+
+      <p class="sucesso__lead" id="suc-lead">
+        Agora é só falar com a gente no WhatsApp para receber o
+        <strong>link de download</strong>. Sua mensagem já vai pronta, com o
+        pedido inteiro escrito — é só enviar.
+      </p>
+
+      <!-- resumo do pedido, montado pelo js/sucesso.js -->
+      <div class="sucesso__pedido" id="suc-pedido" hidden></div>
+
+      <a class="btn btn--wa btn--lg btn--block sucesso__cta" id="suc-wa" href="#">
+        <svg class="ico" viewBox="0 0 32 32" aria-hidden="true" style="fill:currentColor;stroke:none">
+          <path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.4 1.7 6.3L3 29l6.9-1.7A13 13 0 1 0 16 3Zm-4.6 7.1c.5-.2 1.1 0 1.4.5l1.1 1.9c.3.5.2 1-.2 1.4l-.7.7c-.2.2-.3.6-.1.9a11 11 0 0 0 3.7 3.7c.3.2.6.1.9-.1l.7-.7c.4-.4.9-.5 1.4-.2l1.9 1.1c.5.3.7.9.5 1.4-.5 1.3-1.8 2.1-3.2 1.9-4.3-.5-8.3-4.5-8.8-8.8-.2-1.4.6-2.7 1.9-3.2Z"/>
+        </svg>
+        Abrir conversa no WhatsApp
+      </a>
+
+      <p class="sucesso__contagem" id="suc-contagem" aria-live="polite"></p>
+
+      <!-- ===================================================================
+           LINK DE DOWNLOAD DIRETO (opcional)
+           Se um dia você quiser liberar o download na própria página em vez
+           de mandar pelo WhatsApp, tire o hidden daqui e coloque o endereço
+           do arquivo no href.
+           =================================================================== -->
+      <a class="sucesso__download" id="suc-download" href="#" hidden>
+        Baixar o repertório agora
+      </a>
+
+      <div class="sucesso__ajuda">
+        <p>Não abriu sozinho? Toque no botão verde acima.</p>
+        <p>Ou chame no <a data-wa-link data-wa-texto="Olá! Acabei de fazer um pedido no site e quero receber o link de download." href="#"><span data-wa-exibicao>(33) 99709-0370</span></a>.</p>
+      </div>
+
+      <a class="sucesso__voltar" href="repertorio.html">← Voltar para a loja</a>
+    </div>
+
+  </div>
+</main>
+
+<script src="js/shop-config.js"></script>
+<script src="js/sucesso.js"></script>
+
+</body>
+</html>

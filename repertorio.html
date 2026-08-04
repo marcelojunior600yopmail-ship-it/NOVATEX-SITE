@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repertório Atualizado · Seu Pendrive Atualizado — mais de 5.000 músicas</title>
+<meta name="description" content="Repertório completo e atualizado, organizado em 32 pastas por estilo. Mais de 5.000 músicas para paredão, som automotivo, festas e eventos. Link de download enviado no WhatsApp após a confirmação.">
+<meta name="theme-color" content="#04060C">
+
+<!-- ==========================================================================
+     SEU PENDRIVE ATUALIZADO — landing page com carrinho de compras
+
+     >>> PARA MEXER NO PRODUTO, PREÇO, CUPONS OU WHATSAPP: js/shop-config.js
+     >>> PARA LIGAR O MERCADO PAGO: js/shop-config.js + mercadopago/README.md
+
+     Nesta página nada de produto está escrito à mão a não ser o texto de
+     vitrine: o card de preço, o carrinho e o checkout leem tudo da config.
+     ========================================================================== -->
+
+<meta property="og:type" content="product">
+<meta property="og:title" content="Repertório Atualizado · mais de 5.000 músicas">
+<meta property="og:description" content="32 pastas separadas por estilo, atualizações constantes e download rápido. Link enviado no WhatsApp.">
+<meta property="og:image" content="assets/img/pendrive-repertorio.jpg">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="icon" type="image/png" href="assets/img/pendrive-logo.png">
+<link rel="apple-touch-icon" href="assets/img/pendrive-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/pendrive.css">
+<link rel="stylesheet" href="css/cart.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top">
+      <img src="assets/img/pendrive-logo.png" alt="Seu Pendrive Atualizado" width="42" height="42">
+      <span>Seu Pendrive<small>Atualizado</small></span>
+    </a>
+
+    <nav class="nav__links" aria-label="Navegação principal">
+      <a href="#produto">O produto</a>
+      <a href="#pastas">As pastas</a>
+      <a href="#como">Como funciona</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+<span id="top"></span>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="hero__grid" aria-hidden="true"></div>
+
+  <div class="wrap hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow reveal">
+        <span class="eyebrow__dot" aria-hidden="true"></span>
+        Atualizado toda semana
+      </p>
+
+      <h1 class="hero__title reveal" data-reveal-delay="1">
+        Repertório
+        <span class="risca">Atualizado</span>
+        <em>+ de 5.000 músicas</em>
+      </h1>
+
+      <p class="hero__lead reveal" data-reveal-delay="2">
+        Tudo separado em 32 pastas por estilo, pronto para jogar no pendrive e
+        sair tocando. Paredão, som automotivo, festa ou evento — é só escolher a
+        pasta e dar play.
+      </p>
+
+      <p class="hero__price reveal" data-reveal-delay="3">
+        <b data-preco-de="repertorio-atualizado">R$ 20,00</b>
+        <span>pagamento único · sem mensalidade</span>
+      </p>
+
+      <div class="hero__actions reveal" data-reveal-delay="3">
+        <button class="btn btn--ouro btn--lg" type="button"
+                data-add-cart="repertorio-atualizado" data-open-after>
+          Adicionar ao carrinho
+        </button>
+        <a class="btn btn--ghost-neon btn--lg" href="#pastas">Ver as 32 pastas</a>
+      </div>
+
+      <div class="hero__stats reveal" data-reveal-delay="4">
+        <div><b>5.000+</b><span>Músicas</span></div>
+        <div><b>32</b><span>Pastas por estilo</span></div>
+        <div><b>100%</b><span>Organizado</span></div>
+      </div>
+    </div>
+
+    <div class="hero__art reveal" data-reveal-delay="2">
+      <img src="assets/img/pendrive-logo.png"
+           alt="Pendrive azul com o selo Seu Pendrive Atualizado"
+           width="620" height="620" fetchpriority="high" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- ============================ MARQUEE ============================ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Paredão</span><i>✦</i>
+    <span>Som automotivo</span><i>✦</i>
+    <span>Festas</span><i>✦</i>
+    <span>Eventos</span><i>✦</i>
+    <span>Atualizações constantes</span><i>✦</i>
+    <span>Download rápido</span><i>✦</i>
+    <span>Compra segura</span><i>✦</i>
+    <span>Paredão</span><i>✦</i>
+    <span>Som automotivo</span><i>✦</i>
+    <span>Festas</span><i>✦</i>
+    <span>Eventos</span><i>✦</i>
+    <span>Atualizações constantes</span><i>✦</i>
+    <span>Download rápido</span><i>✦</i>
+    <span>Compra segura</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ============================ PRODUTO ============================ -->
+<section class="section section--glow" id="produto">
+  <div class="wrap produto">
+
+    <div class="produto__midia reveal">
+      <figure class="produto__foto">
+        <img src="assets/img/pendrive-repertorio.jpg"
+             alt="Lista das 32 pastas do repertório atualizado, com mais de 5.000 músicas"
+             width="1240" height="1240" loading="lazy" decoding="async">
+        <span class="produto__tag">Mais vendido</span>
+        <button class="produto__zoom" type="button" data-zoom aria-label="Ampliar a foto do repertório"></button>
+      </figure>
+      <p class="produto__legenda">Toque na imagem para ampliar e ler a lista completa.</p>
+    </div>
+
+    <div class="produto__info">
+      <p class="eyebrow eyebrow--ouro reveal"><span class="eyebrow__dot" aria-hidden="true"></span>Produto digital</p>
+      <h2 class="produto__nome reveal" data-reveal-delay="1">Repertório Atualizado</h2>
+
+      <p class="produto__desc reveal" data-reveal-delay="2">
+        Acesso ao repertório completo e atualizado, organizado em pastas para
+        facilitar a navegação. Após a confirmação do pagamento, o cliente recebe
+        o link para download.
+      </p>
+
+      <ul class="produto__destaques reveal" data-reveal-delay="2">
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          Mais de 5.000 músicas em um único pacote
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          32 pastas separadas por estilo — nada de procurar faixa por faixa
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          Atualizações constantes com o que está bombando
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          Pronto para paredão, som automotivo, festas e eventos
+        </li>
+      </ul>
+
+      <!-- CARD DE PREÇO — os valores são preenchidos pelo js/shop-config.js -->
+      <div class="preco-box reveal" data-reveal-delay="3">
+        <div class="preco-box__topo">
+          <p class="preco-box__preco">
+            <b data-preco="repertorio-atualizado">R$ 20,00</b>
+            <del data-preco-antigo="repertorio-atualizado" hidden></del>
+          </p>
+          <p class="preco-box__entrega">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10m0 0 4-4m-4 4-4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Link enviado no WhatsApp
+          </p>
+        </div>
+
+        <div class="preco-box__acoes">
+          <div class="stepper" role="group" aria-label="Quantidade">
+            <button type="button" data-step="-1" aria-label="Diminuir quantidade">−</button>
+            <input id="qtd-produto" type="text" inputmode="numeric" value="1" aria-label="Quantidade">
+            <button type="button" data-step="1" aria-label="Aumentar quantidade">+</button>
+          </div>
+
+          <button class="btn btn--neon btn--lg" type="button"
+                  data-add-cart="repertorio-atualizado" data-qty-from="qtd-produto" data-open-after>
+            Adicionar ao carrinho
+            <span class="sr-only">— <span data-cart-count-for="repertorio-atualizado" hidden>0</span> no carrinho</span>
+          </button>
+        </div>
+
+        <p class="preco-box__nota">
+          Pagamento único. Assim que confirmar, você recebe o link para baixar
+          tudo — sem mensalidade e sem precisar mandar o pendrive para ninguém.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================ PASTAS ============================ -->
+<section class="section section--carbono" id="pastas">
+  <div class="wrap">
+    <header class="s-head s-head--center">
+      <p class="eyebrow reveal"><span class="eyebrow__dot" aria-hidden="true"></span>O que vem dentro</p>
+      <h2 class="s-title reveal" data-reveal-delay="1">32 pastas.<br><em>Zero bagunça.</em></h2>
+      <p class="s-lead reveal" data-reveal-delay="2">
+        Cada estilo na sua pasta, com nome claro e ordem certa. Você abre,
+        escolhe o clima da festa e joga na caixa.
+      </p>
+    </header>
+
+    <ul class="pastas">
+      <li class="pasta reveal"><span class="pasta__num">01</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Hits que bombou</span></li>
+      <li class="pasta reveal"><span class="pasta__num">02</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Forró</span></li>
+      <li class="pasta reveal"><span class="pasta__num">03</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Piseiro</span></li>
+      <li class="pasta reveal"><span class="pasta__num">04</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Forró romântico</span></li>
+      <li class="pasta reveal"><span class="pasta__num">05</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Forrozin</span></li>
+      <li class="pasta reveal"><span class="pasta__num">06</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Funk</span></li>
+      <li class="pasta reveal"><span class="pasta__num">07</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Brega funk</span></li>
+      <li class="pasta reveal"><span class="pasta__num">08</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Funk antigo</span></li>
+      <li class="pasta reveal"><span class="pasta__num">09</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Trap funk e rap</span></li>
+      <li class="pasta reveal"><span class="pasta__num">10</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Bregadeira arrochadeira</span></li>
+      <li class="pasta reveal"><span class="pasta__num">11</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">No beat</span></li>
+      <li class="pasta reveal"><span class="pasta__num">12</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Swingueira e pagodão</span></li>
+      <li class="pasta reveal"><span class="pasta__num">13</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Axé</span></li>
+      <li class="pasta reveal"><span class="pasta__num">14</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Swingueira antiga</span></li>
+      <li class="pasta reveal"><span class="pasta__num">15</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Arrocha</span></li>
+      <li class="pasta reveal"><span class="pasta__num">16</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Brega e seresta antiga</span></li>
+      <li class="pasta reveal"><span class="pasta__num">17</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Sertanejo</span></li>
+      <li class="pasta reveal"><span class="pasta__num">18</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Sertanejo raiz</span></li>
+      <li class="pasta reveal"><span class="pasta__num">19</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Pagode</span></li>
+      <li class="pasta reveal"><span class="pasta__num">20</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Reggae</span></li>
+      <li class="pasta reveal"><span class="pasta__num">21</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Forró antigo pra paredão</span></li>
+      <li class="pasta reveal"><span class="pasta__num">22</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Forró pé de serra</span></li>
+      <li class="pasta reveal"><span class="pasta__num">23</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Forró das antigas</span></li>
+      <li class="pasta reveal"><span class="pasta__num">24</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Forró de favela</span></li>
+      <li class="pasta reveal"><span class="pasta__num">25</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">MPB e rock</span></li>
+      <li class="pasta reveal"><span class="pasta__num">26</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Nas igrejas</span></li>
+      <li class="pasta reveal"><span class="pasta__num">27</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Flashback</span></li>
+      <li class="pasta reveal"><span class="pasta__num">28</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Eletrônicas dance pop</span></li>
+      <li class="pasta reveal"><span class="pasta__num">29</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Vaquejada</span></li>
+      <li class="pasta reveal"><span class="pasta__num">30</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Lambada</span></li>
+      <li class="pasta reveal"><span class="pasta__num">31</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">TBT</span></li>
+      <li class="pasta reveal"><span class="pasta__num">32</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">São João festa junina</span></li>
+    </ul>
+
+    <p class="pastas__nota">A lista cresce a cada atualização — quem já comprou continua recebendo as novidades.</p>
+  </div>
+</section>
+
+<!-- ============================ PARA QUEM ============================ -->
+<section class="section" id="para-quem">
+  <div class="wrap">
+    <header class="s-head s-head--center">
+      <p class="eyebrow eyebrow--ouro reveal"><span class="eyebrow__dot" aria-hidden="true"></span>Feito para</p>
+      <h2 class="s-title reveal" data-reveal-delay="1">Onde o som<br><em>não pode falhar.</em></h2>
+    </header>
+
+    <ul class="cards">
+      <li class="card reveal">
+        <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><circle cx="12" cy="16" r="3.2"/></svg></span>
+        <h3>Paredão</h3>
+        <p>Faixas com pegada e graves na medida, separadas para não travar a sequência.</p>
+      </li>
+      <li class="card reveal" data-reveal-delay="1">
+        <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16h14l-1.5-5.5A2 2 0 0 0 15.6 9H8.4a2 2 0 0 0-1.9 1.5L5 16Z"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="16.5" cy="18.5" r="1.5"/></svg></span>
+        <h3>Som automotivo</h3>
+        <p>Passa o pendrive, escolhe a pasta e sai rodando. Sem internet, sem anúncio.</p>
+      </li>
+      <li class="card reveal" data-reveal-delay="2">
+        <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V6l10-2v12"/><circle cx="7" cy="18" r="2.5"/><circle cx="17" cy="16" r="2.5"/></svg></span>
+        <h3>Festas</h3>
+        <p>Do arrocha ao flashback: dá para virar o clima da festa trocando de pasta.</p>
+      </li>
+      <li class="card reveal" data-reveal-delay="3">
+        <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20V9l9-5 9 5v11"/><path d="M9 20v-6h6v6"/></svg></span>
+        <h3>Eventos</h3>
+        <p>Vaquejada, São João, igreja, casamento. Tem pasta pronta para cada ocasião.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ COMO FUNCIONA ============================ -->
+<section class="section section--carbono section--glow" id="como">
+  <div class="wrap">
+    <header class="s-head s-head--center">
+      <p class="eyebrow reveal"><span class="eyebrow__dot" aria-hidden="true"></span>Como funciona</p>
+      <h2 class="s-title reveal" data-reveal-delay="1">Três passos<br><em>e o som é seu.</em></h2>
+    </header>
+
+    <ol class="passos">
+      <li class="passo reveal">
+        <h3>Adicione ao carrinho</h3>
+        <p>Escolha a quantidade e finalize. Leva menos de um minuto — só nome, e-mail e WhatsApp.</p>
+      </li>
+      <li class="passo reveal" data-reveal-delay="1">
+        <h3>Cai na nossa conversa</h3>
+        <p>Ao finalizar, você é levado direto ao WhatsApp com o resumo do pedido pronto. A gente combina o pagamento na hora.</p>
+      </li>
+      <li class="passo reveal" data-reveal-delay="2">
+        <h3>Receba o link</h3>
+        <p>Pagamento confirmado, o link de download chega na mesma conversa. Baixa e joga no pendrive.</p>
+      </li>
+    </ol>
+
+    <div class="s-head--center" style="margin-top: 3rem;">
+      <button class="btn btn--ouro btn--lg reveal" type="button"
+              data-add-cart="repertorio-atualizado" data-open-after>
+        Quero meu repertório
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="section" id="faq">
+  <div class="wrap wrap--narrow">
+    <header class="s-head s-head--center">
+      <p class="eyebrow reveal"><span class="eyebrow__dot" aria-hidden="true"></span>Dúvidas rápidas</p>
+      <h2 class="s-title reveal" data-reveal-delay="1">Antes de <em>comprar</em></h2>
+    </header>
+
+    <div class="faq reveal" data-reveal-delay="2">
+      <details class="qa" open>
+        <summary>Como recebo o repertório?</summary>
+        <div class="qa__body"><p>Depois que o pagamento é confirmado, o link de download é enviado na conversa do WhatsApp. É só baixar no celular ou no computador e copiar para o seu pendrive.</p></div>
+      </details>
+      <details class="qa">
+        <summary>Preciso mandar meu pendrive?</summary>
+        <div class="qa__body"><p>Não. O produto é digital: você recebe o link, baixa os arquivos e coloca no pendrive que você já tem.</p></div>
+      </details>
+      <details class="qa">
+        <summary>É pagamento único ou mensalidade?</summary>
+        <div class="qa__body"><p>Pagamento único. Você paga uma vez e continua recebendo as atualizações do repertório.</p></div>
+      </details>
+      <details class="qa">
+        <summary>Quais formas de pagamento?</summary>
+        <div class="qa__body"><p>Combinamos direto na conversa do WhatsApp — Pix é o mais rápido. Assim que cai, o link é liberado.</p></div>
+      </details>
+      <details class="qa">
+        <summary>Serve no som do carro e no paredão?</summary>
+        <div class="qa__body"><p>Serve. Os arquivos são MP3, o formato que praticamente todo som de carro, paredão e caixa de som lê pelo USB.</p></div>
+      </details>
+      <details class="qa">
+        <summary>Quantas músicas vêm?</summary>
+        <div class="qa__body"><p>Mais de 5.000, divididas em 32 pastas por estilo. A quantidade aumenta a cada atualização.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CTA FINAL ============================ -->
+<section class="cta">
+  <div class="wrap wrap--narrow">
+    <img class="cta__logo reveal" src="assets/img/pendrive-logo.png"
+         alt="Seu Pendrive Atualizado" width="120" height="120" loading="lazy">
+    <h2 class="reveal" data-reveal-delay="1">Sua próxima festa<br><em>já tem trilha sonora.</em></h2>
+    <p class="reveal" data-reveal-delay="1">
+      Mais de 5.000 músicas organizadas, prontas para baixar. Pagamento único e
+      o link chega na hora no seu WhatsApp.
+    </p>
+    <div class="cta__actions reveal" data-reveal-delay="2">
+      <button class="btn btn--ouro btn--lg" type="button"
+              data-add-cart="repertorio-atualizado" data-open-after>
+        Adicionar ao carrinho
+      </button>
+      <a class="btn btn--ghost-neon btn--lg" href="#produto">Ver detalhes</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================ RODAPÉ ============================ -->
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <div class="foot__brand">
+      <img src="assets/img/pendrive-logo.png" alt="Seu Pendrive Atualizado" width="64" height="64" loading="lazy">
+      <p>Repertório atualizado para paredão, som automotivo, festas e eventos.<br>Produto digital, entrega imediata.</p>
+    </div>
+
+    <nav class="foot__col" aria-label="Seções">
+      <h3>Navegar</h3>
+      <a href="#produto">O produto</a>
+      <a href="#pastas">As pastas</a>
+      <a href="#como">Como funciona</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+
+    <div class="foot__col">
+      <h3>Contato</h3>
+      <a data-wa-link data-wa-texto="Olá! Vim pelo site e quero saber mais sobre o Repertório Atualizado." href="#">WhatsApp <span data-wa-exibicao>(33) 99709-0370</span></a>
+      <a href="https://www.instagram.com/seupendrive_atualizado" target="_blank" rel="noopener">@seupendrive_atualizado</a>
+    </div>
+  </div>
+
+  <div class="wrap foot__bottom">
+    <p>© <span id="ano">2026</span> Seu Pendrive Atualizado. Todos os direitos reservados.</p>
+    <p>Conteúdo digital · sem devolução após o envio do link.</p>
+  </div>
+</footer>
+
+<!-- Lightbox da foto do repertório -->
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button class="lightbox__close" type="button" aria-label="Fechar foto">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img id="lb-img" alt="">
+</div>
+
+<!-- WhatsApp flutuante -->
+<a class="wa-float" data-wa-link data-wa-texto="Olá! Vim pelo site e quero saber mais sobre o Repertório Atualizado." href="#" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.4 1.7 6.3L3 29l6.9-1.7A13 13 0 1 0 16 3Zm-4.6 7.1c.5-.2 1.1 0 1.4.5l1.1 1.9c.3.5.2 1-.2 1.4l-.7.7c-.2.2-.3.6-.1.9a11 11 0 0 0 3.7 3.7c.3.2.6.1.9-.1l.7-.7c.4-.4.9-.5 1.4-.2l1.9 1.1c.5.3.7.9.5 1.4-.5 1.3-1.8 2.1-3.2 1.9-4.3-.5-8.3-4.5-8.8-8.8-.2-1.4.6-2.7 1.9-3.2Z"/></svg>
+  <span class="wa-float__label">Falar no WhatsApp</span>
+</a>
+
+<!-- ============================ SCRIPTS ============================
+     A ordem importa: a configuração vem primeiro, depois o carrinho,
+     depois o checkout e por último a interatividade da página. -->
+<script src="js/shop-config.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/checkout.js"></script>
+<script src="js/pendrive.js"></script>
+
+</body>
+</html>

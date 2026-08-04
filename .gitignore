@@ -1,0 +1,10 @@
+# credenciais — nunca versionar
+mercadopago/.env
+.env
+
+# dependências
+node_modules/
+
+# sistema
+.DS_Store
+Thumbs.db
