@@ -40,9 +40,11 @@ jobs:
           touch _site/.nojekyll                 # não processar com Jekyll
           ls -R _site | head -40
 
+      # ATENÇÃO — uma única vez, e só o dono do repositório pode fazer:
+      #   Settings > Pages > Build and deployment > Source: GitHub Actions
+      # O GitHub não deixa esta automação ligar o Pages sozinha; depois de
+      # ligado, todo push na main publica automaticamente.
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:
