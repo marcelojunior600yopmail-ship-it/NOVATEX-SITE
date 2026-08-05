@@ -72,6 +72,16 @@ app.post('/api/mercadopago/criar-preferencia', async (req, res) => {
   const pagador = pedido.pagador || {};
   const retorno = pedido.retorno || {};
 
+  // O Mercado Pago exige endereços completos no back_urls; a configuração do
+  // site guarda caminhos curtos ('sucesso.html'), então completamos aqui.
+  const absoluta = (url) => {
+    if (!url) return undefined;
+    if (/^https?:\/\//i.test(url)) return url;
+    const host = req.headers['x-forwarded-host'] || req.headers.host;
+    const protocolo = req.headers['x-forwarded-proto'] || 'http';
+    return `${protocolo}://${host}/${String(url).replace(/^\//, '')}`;
+  };
+
   const preferencia = {
     items: itensMP,
     payer: {
@@ -83,9 +93,9 @@ app.post('/api/mercadopago/criar-preferencia', async (req, res) => {
     },
     // volta para a página de sucesso, que leva o cliente ao WhatsApp
     back_urls: {
-      success: retorno.sucesso,
-      pending: retorno.pendente,
-      failure: retorno.falha
+      success: absoluta(retorno.sucesso),
+      pending: absoluta(retorno.pendente),
+      failure: absoluta(retorno.falha)
     },
     auto_return: 'approved',
     // o número do pedido volta junto na notificação

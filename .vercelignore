@@ -1,0 +1,14 @@
+# Arquivos que não precisam ir para o ar (ficam no repositório).
+
+# servidor local do Mercado Pago — na Vercel quem responde é a pasta /api
+mercadopago/
+
+# material bruto baixado do Instagram, não usado pelo site
+novatexinhapim_*
+novatexinhapim_highlight_*/
+contato dos vendedores.png
+informações sobre a loja.txt
+logo da loja.jpg
+serve.ps1
+
+node_modules/

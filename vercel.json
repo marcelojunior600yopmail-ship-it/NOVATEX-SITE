@@ -1,0 +1,42 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+
+  "//": [
+    "Configuração de hospedagem na Vercel.",
+    "",
+    "O endereço principal (/) abre a loja do Repertório Atualizado.",
+    "O site da Novatex continua no ar em /novatex.",
+    "",
+    "Para inverter (Novatex na raiz e a loja em /repertorio.html),",
+    "apague as duas primeiras linhas de 'rewrites'."
+  ],
+
+  "rewrites": [
+    { "source": "/", "destination": "/repertorio.html" },
+    { "source": "/novatex", "destination": "/index.html" }
+  ],
+
+  "headers": [
+    {
+      "//": "as fontes têm nome fixo e nunca mudam — pode guardar por um ano",
+      "source": "/assets/fonts/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "//": "imagens: uma semana, para uma troca de foto aparecer rápido",
+      "source": "/assets/img/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=604800" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}
