@@ -306,10 +306,15 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 .hero__title { font-size: var(--fs-h1); margin-bottom: var(--s-3); }
-.hero__title em { font-style: normal; display: block; color: var(--ouro); }
 .hero__title .risca {
   display: block; color: var(--neon-claro);
   text-shadow: 0 0 30px var(--neon-glow);
+}
+/* a terceira linha é um selo, não título — some pequena e dourada */
+.hero__title em {
+  font-style: normal; display: block; color: var(--ouro);
+  font-size: 0.3em; letter-spacing: 0.1em; line-height: 1.2;
+  margin-top: 0.7rem;
 }
 
 .hero__lead { color: var(--texto-2); font-size: var(--fs-lead); max-width: 52ch; }
@@ -341,15 +346,41 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* pendrive girando de leve */
 .hero__art { position: relative; }
+/* a arte da logo é um círculo sobre fundo preto — arredondar tira o quadrado
+   e deixa ela flutuando no fundo da página */
 .hero__art img {
   width: min(100%, 520px); margin-inline: auto;
-  filter: drop-shadow(0 0 60px rgba(30, 136, 255, 0.4));
+  border-radius: 50%;
+  filter: drop-shadow(0 0 70px rgba(30, 136, 255, 0.45));
   animation: flutuar 7s ease-in-out infinite;
 }
 @keyframes flutuar {
   0%, 100% { transform: translateY(-8px); }
   50% { transform: translateY(10px); }
 }
+/* equalizador atrás da logo */
+.eq {
+  position: absolute; left: 50%; bottom: -6%; transform: translateX(-50%);
+  width: min(112%, 640px); height: 200px;
+  display: flex; align-items: flex-end; justify-content: center; gap: 2.4%;
+  pointer-events: none; z-index: -1;
+  mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+}
+.eq i {
+  flex: 1 1 0; min-width: 3px; border-radius: 3px 3px 1px 1px;
+  height: var(--h);
+  background: linear-gradient(180deg, var(--neon-claro), rgba(30, 136, 255, 0.15));
+  transform-origin: bottom;
+  animation: pulsar var(--d) ease-in-out var(--t) infinite alternate;
+  opacity: 0.55;
+}
+@keyframes pulsar {
+  from { transform: scaleY(0.3); }
+  to   { transform: scaleY(1); }
+}
+@media (prefers-reduced-motion: reduce) { .eq { display: none; } }
+
 .hero__art::after {
   content: ""; position: absolute; left: 50%; bottom: 4%; transform: translateX(-50%);
   width: 62%; height: 24px; border-radius: 50%;
@@ -390,7 +421,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .produto__foto img { width: 100%; display: block; }
 .produto__tag {
-  position: absolute; top: 1rem; left: 1rem; z-index: 2;
+  position: absolute; top: 1rem; right: 1rem; z-index: 2;
   background: linear-gradient(135deg, var(--ouro), var(--ouro-2));
   color: #1A1200; font-size: var(--fs-xs); font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
@@ -459,24 +490,97 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   font-size: var(--fs-sm); color: var(--texto-3);
 }
 
-/* ---------- 8. PASTAS ---------- */
-.pastas {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 0.75rem;
+/* ---------- 8. PASTAS — janela de arquivos ----------
+   A seção imita o gerenciador de arquivos que o cliente vai abrir depois de
+   baixar: mesma barra de endereço, mesmas colunas, mesma lista rolável. */
+.ex {
+  border: 1px solid var(--borda-forte); border-radius: var(--r-lg); overflow: hidden;
+  background: linear-gradient(165deg, var(--carbono-2), rgba(4, 6, 12, 0.9));
+  box-shadow: var(--sombra), 0 0 0 1px rgba(255, 255, 255, 0.02) inset;
 }
-.pasta {
+
+.ex__barra {
   display: flex; align-items: center; gap: 0.75rem;
-  padding: 0.8rem 1rem; border-radius: var(--r-sm);
-  border: 1px solid var(--borda); background: var(--carbono-2);
-  transition: border-color 0.25s var(--ease), background 0.25s var(--ease), transform 0.25s var(--ease);
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid var(--borda);
+  background: rgba(30, 136, 255, 0.08);
 }
-.pasta:hover { border-color: var(--borda-forte); background: var(--carbono-3); transform: translateY(-2px); }
-.pasta__num {
-  font-family: var(--font-display); font-size: 0.85rem; color: var(--texto-3);
-  min-width: 1.5rem;
+.ex__dots { display: flex; gap: 0.4rem; }
+.ex__dots i { width: 10px; height: 10px; border-radius: 50%; background: rgba(120, 175, 255, 0.35); }
+.ex__caminho {
+  font-size: 0.82rem; font-weight: 600; color: var(--texto-2);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.pasta__ico { flex: 0 0 18px; width: 18px; height: 18px; fill: none; stroke: var(--ouro); stroke-width: 1.8; }
-.pasta__nome { font-size: 0.9rem; font-weight: 500; letter-spacing: 0.01em; }
+.ex__caminho em { font-style: normal; color: var(--texto-3); margin: 0 0.15rem; }
+.ex__caminho b { color: var(--branco); }
+.ex__conta {
+  margin-left: auto; flex: 0 0 auto;
+  font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--ouro);
+}
+
+.ex__colunas, .ex__linha {
+  display: grid; grid-template-columns: 2.2rem 1fr 11rem 10rem;
+  align-items: center; gap: 0.75rem;
+  padding: 0.55rem 1.1rem;
+}
+.ex__colunas {
+  grid-template-columns: 2.2rem 1fr 11rem 10rem;
+  border-bottom: 1px solid var(--borda);
+  font-size: var(--fs-xs); font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--texto-3);
+  background: rgba(4, 6, 12, 0.5);
+}
+.ex__colunas span:first-child { grid-column: 1 / 3; }
+
+.ex__lista {
+  max-height: min(60vh, 520px); overflow-y: auto; overscroll-behavior: contain;
+  scrollbar-width: thin; scrollbar-color: var(--neon) transparent;
+}
+.ex__lista::-webkit-scrollbar { width: 10px; }
+.ex__lista::-webkit-scrollbar-track { background: rgba(4, 6, 12, 0.6); }
+.ex__lista::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--neon), #0F6FE0); border-radius: 999px;
+  border: 3px solid rgba(4, 6, 12, 0.6);
+}
+
+.ex__linha {
+  border-bottom: 1px solid var(--borda-soft, rgba(120, 165, 230, 0.07));
+  transition: background 0.18s var(--ease);
+  cursor: default;
+}
+.ex__linha:nth-child(even) { background: rgba(120, 175, 255, 0.035); }
+.ex__linha:hover { background: rgba(30, 136, 255, 0.16); }
+.ex__linha:last-child { border-bottom: 0; }
+
+.ex__num { font-family: var(--font-display); font-size: 0.72rem; color: var(--texto-3); }
+.ex__nome {
+  display: flex; align-items: center; gap: 0.6rem;
+  font-size: 0.95rem; font-weight: 500;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.ex__ico {
+  flex: 0 0 18px; width: 18px; height: 18px;
+  fill: none; stroke: var(--ouro); stroke-width: 1.7;
+}
+.ex__data, .ex__tipo {
+  font-size: 0.8rem; color: var(--texto-3); font-variant-numeric: tabular-nums;
+}
+
+.ex__rodape {
+  display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  padding: 0.7rem 1.1rem;
+  border-top: 1px solid var(--borda); background: rgba(4, 6, 12, 0.5);
+  font-size: var(--fs-xs); color: var(--texto-3);
+}
+.ex__peso { color: var(--neon-claro); font-weight: 600; }
+
+@media (max-width: 780px) {
+  .ex__colunas, .ex__linha { grid-template-columns: 1.8rem 1fr 6.4rem; padding-inline: 0.8rem; }
+  .ex__colunas span:last-child, .ex__tipo { display: none; }
+  .ex__data { font-size: 0.72rem; }
+  .ex__nome { font-size: 0.88rem; }
+}
 
 .pastas__nota { margin-top: var(--s-4); text-align: center; color: var(--texto-3); font-size: var(--fs-sm); }
 

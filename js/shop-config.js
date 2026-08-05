@@ -127,8 +127,8 @@
         preco: 20,
         precoDe: null,
         descricao: 'Acesso ao repertório completo e atualizado, organizado em pastas para facilitar a navegação. Após a confirmação do pagamento, o cliente recebe o link para download.',
-        imagem: 'assets/img/pendrive-repertorio.jpg',
-        alt: 'Lista das 32 pastas do repertório atualizado, com mais de 5.000 músicas',
+        imagem: 'assets/img/produto-repertorio.jpg',
+        alt: 'Capa do Repertório Atualizado mostrando as 32 pastas e o preço de R$ 20,00',
         tag: 'Mais vendido',
         entrega: 'Link de download enviado no WhatsApp',
         destaques: [

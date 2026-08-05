@@ -20,14 +20,14 @@
 <meta property="og:type" content="product">
 <meta property="og:title" content="Repertório Atualizado · mais de 5.000 músicas">
 <meta property="og:description" content="32 pastas separadas por estilo, atualizações constantes e download rápido. Link enviado no WhatsApp.">
-<meta property="og:image" content="assets/img/pendrive-repertorio.jpg">
+<meta property="og:image" content="assets/img/produto-repertorio.jpg">
 <meta property="og:locale" content="pt_BR">
 
-<link rel="icon" type="image/png" href="assets/img/pendrive-logo.png">
-<link rel="apple-touch-icon" href="assets/img/pendrive-logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/img/pendrive-favicon.png">
+<link rel="apple-touch-icon" href="assets/img/pendrive-favicon.png">
+<link rel="preload" href="assets/fonts/anton-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/pendrive.css">
 <link rel="stylesheet" href="css/cart.css">
 <script>document.documentElement.classList.add('js');</script>
@@ -40,7 +40,7 @@
 <header class="nav" id="nav">
   <div class="nav__inner">
     <a class="nav__brand" href="#top">
-      <img src="assets/img/pendrive-logo.png" alt="Seu Pendrive Atualizado" width="42" height="42">
+      <img src="assets/img/pendrive-logo.jpg" alt="Seu Pendrive Atualizado" width="42" height="42">
       <span>Seu Pendrive<small>Atualizado</small></span>
     </a>
 
@@ -101,7 +101,9 @@
     </div>
 
     <div class="hero__art reveal" data-reveal-delay="2">
-      <img src="assets/img/pendrive-logo.png"
+      <!-- as barras do equalizador são criadas pelo js/pendrive.js -->
+      <div class="eq" id="eq" aria-hidden="true"></div>
+      <img src="assets/img/pendrive-logo.jpg"
            alt="Pendrive azul com o selo Seu Pendrive Atualizado"
            width="620" height="620" fetchpriority="high" decoding="async">
     </div>
@@ -134,9 +136,9 @@
 
     <div class="produto__midia reveal">
       <figure class="produto__foto">
-        <img src="assets/img/pendrive-repertorio.jpg"
-             alt="Lista das 32 pastas do repertório atualizado, com mais de 5.000 músicas"
-             width="1240" height="1240" loading="lazy" decoding="async">
+        <img src="assets/img/produto-repertorio.jpg"
+             alt="Capa do Repertório Atualizado: janela com as 32 pastas por estilo e o selo de R$ 20,00"
+             width="1200" height="1200" loading="lazy" decoding="async">
         <span class="produto__tag">Mais vendido</span>
         <button class="produto__zoom" type="button" data-zoom aria-label="Ampliar a foto do repertório"></button>
       </figure>
@@ -221,40 +223,217 @@
       </p>
     </header>
 
-    <ul class="pastas">
-      <li class="pasta reveal"><span class="pasta__num">01</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Hits que bombou</span></li>
-      <li class="pasta reveal"><span class="pasta__num">02</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Forró</span></li>
-      <li class="pasta reveal"><span class="pasta__num">03</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Piseiro</span></li>
-      <li class="pasta reveal"><span class="pasta__num">04</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Forró romântico</span></li>
-      <li class="pasta reveal"><span class="pasta__num">05</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Forrozin</span></li>
-      <li class="pasta reveal"><span class="pasta__num">06</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Funk</span></li>
-      <li class="pasta reveal"><span class="pasta__num">07</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Brega funk</span></li>
-      <li class="pasta reveal"><span class="pasta__num">08</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Funk antigo</span></li>
-      <li class="pasta reveal"><span class="pasta__num">09</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Trap funk e rap</span></li>
-      <li class="pasta reveal"><span class="pasta__num">10</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Bregadeira arrochadeira</span></li>
-      <li class="pasta reveal"><span class="pasta__num">11</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">No beat</span></li>
-      <li class="pasta reveal"><span class="pasta__num">12</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Swingueira e pagodão</span></li>
-      <li class="pasta reveal"><span class="pasta__num">13</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Axé</span></li>
-      <li class="pasta reveal"><span class="pasta__num">14</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Swingueira antiga</span></li>
-      <li class="pasta reveal"><span class="pasta__num">15</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Arrocha</span></li>
-      <li class="pasta reveal"><span class="pasta__num">16</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Brega e seresta antiga</span></li>
-      <li class="pasta reveal"><span class="pasta__num">17</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Sertanejo</span></li>
-      <li class="pasta reveal"><span class="pasta__num">18</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Sertanejo raiz</span></li>
-      <li class="pasta reveal"><span class="pasta__num">19</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Pagode</span></li>
-      <li class="pasta reveal"><span class="pasta__num">20</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Reggae</span></li>
-      <li class="pasta reveal"><span class="pasta__num">21</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Forró antigo pra paredão</span></li>
-      <li class="pasta reveal"><span class="pasta__num">22</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Forró pé de serra</span></li>
-      <li class="pasta reveal"><span class="pasta__num">23</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Forró das antigas</span></li>
-      <li class="pasta reveal"><span class="pasta__num">24</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Forró de favela</span></li>
-      <li class="pasta reveal"><span class="pasta__num">25</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">MPB e rock</span></li>
-      <li class="pasta reveal"><span class="pasta__num">26</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Nas igrejas</span></li>
-      <li class="pasta reveal"><span class="pasta__num">27</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Flashback</span></li>
-      <li class="pasta reveal"><span class="pasta__num">28</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Eletrônicas dance pop</span></li>
-      <li class="pasta reveal"><span class="pasta__num">29</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Vaquejada</span></li>
-      <li class="pasta reveal"><span class="pasta__num">30</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">Lambada</span></li>
-      <li class="pasta reveal"><span class="pasta__num">31</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">TBT</span></li>
-      <li class="pasta reveal"><span class="pasta__num">32</span><svg class="pasta__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg><span class="pasta__nome">São João festa junina</span></li>
-    </ul>
+    <div class="ex reveal" data-reveal-delay="2">
+      <div class="ex__barra">
+        <span class="ex__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="ex__caminho">PENDRIVE (E:) <em>›</em> <b>REPERTÓRIO ATUALIZADO</b></span>
+        <span class="ex__conta">32 pastas</span>
+      </div>
+
+      <div class="ex__colunas" aria-hidden="true">
+        <span>Nome</span><span>Modificado em</span><span>Tipo</span>
+      </div>
+
+      <ul class="ex__lista">
+        <li class="ex__linha">
+          <span class="ex__num">01</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Hits que bombou</span>
+          <span class="ex__data">02/06/2026 07:22</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">02</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Forró</span>
+          <span class="ex__data">03/06/2026 06:09</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">03</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Piseiro</span>
+          <span class="ex__data">31/05/2026 17:43</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">04</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Forró romântico</span>
+          <span class="ex__data">03/06/2026 18:17</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">05</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Forrozin</span>
+          <span class="ex__data">01/06/2026 14:35</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">06</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Funk</span>
+          <span class="ex__data">04/06/2026 06:28</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">07</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Brega funk</span>
+          <span class="ex__data">03/06/2026 10:38</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">08</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Funk antigo</span>
+          <span class="ex__data">24/05/2026 14:01</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">09</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Trap funk e rap</span>
+          <span class="ex__data">04/06/2026 06:37</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">10</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Bregadeira arrochadeira</span>
+          <span class="ex__data">04/06/2026 06:48</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">11</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>No beat</span>
+          <span class="ex__data">29/05/2026 19:07</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">12</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Swingueira e pagodão</span>
+          <span class="ex__data">04/06/2026 06:48</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">13</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Axé</span>
+          <span class="ex__data">16/05/2026 08:07</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">14</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Swingueira antiga</span>
+          <span class="ex__data">19/03/2026 13:11</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">15</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Arrocha</span>
+          <span class="ex__data">04/06/2026 07:57</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">16</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Brega e seresta antiga</span>
+          <span class="ex__data">23/05/2026 19:44</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">17</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Sertanejo</span>
+          <span class="ex__data">04/06/2026 06:06</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">18</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Sertanejo raiz</span>
+          <span class="ex__data">01/06/2026 21:56</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">19</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Pagode</span>
+          <span class="ex__data">01/06/2026 22:00</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">20</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Reggae</span>
+          <span class="ex__data">16/05/2026 11:44</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">21</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Forró antigo pra paredão</span>
+          <span class="ex__data">25/05/2026 14:52</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">22</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Forró pé de serra</span>
+          <span class="ex__data">31/05/2026 17:41</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">23</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Forró das antigas</span>
+          <span class="ex__data">19/03/2026 13:12</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">24</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Forró de favela</span>
+          <span class="ex__data">02/04/2026 21:38</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">25</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>MPB e rock</span>
+          <span class="ex__data">19/03/2026 13:12</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">26</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Nas igrejas</span>
+          <span class="ex__data">02/06/2026 06:27</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">27</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Flashback</span>
+          <span class="ex__data">19/03/2026 13:13</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">28</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Eletrônicas dance pop</span>
+          <span class="ex__data">03/06/2026 10:27</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">29</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Vaquejada</span>
+          <span class="ex__data">16/05/2026 15:12</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">30</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>Lambada</span>
+          <span class="ex__data">12/04/2026 19:31</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">31</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>TBT</span>
+          <span class="ex__data">06/05/2026 16:35</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+        <li class="ex__linha">
+          <span class="ex__num">32</span>
+          <span class="ex__nome"><svg class="ex__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>São João festa junina</span>
+          <span class="ex__data">26/05/2026 11:26</span>
+          <span class="ex__tipo">Pasta de arquivos</span>
+        </li>
+      </ul>
+
+      <div class="ex__rodape">
+        <span class="ex__sel">32 itens selecionados</span>
+        <span class="ex__peso">Mais de 5.000 músicas</span>
+      </div>
+    </div>
 
     <p class="pastas__nota">A lista cresce a cada atualização — quem já comprou continua recebendo as novidades.</p>
   </div>
@@ -365,7 +544,7 @@
 <!-- ============================ CTA FINAL ============================ -->
 <section class="cta">
   <div class="wrap wrap--narrow">
-    <img class="cta__logo reveal" src="assets/img/pendrive-logo.png"
+    <img class="cta__logo reveal" src="assets/img/pendrive-logo.jpg"
          alt="Seu Pendrive Atualizado" width="120" height="120" loading="lazy">
     <h2 class="reveal" data-reveal-delay="1">Sua próxima festa<br><em>já tem trilha sonora.</em></h2>
     <p class="reveal" data-reveal-delay="1">
@@ -387,7 +566,7 @@
 <footer class="foot">
   <div class="wrap foot__inner">
     <div class="foot__brand">
-      <img src="assets/img/pendrive-logo.png" alt="Seu Pendrive Atualizado" width="64" height="64" loading="lazy">
+      <img src="assets/img/pendrive-logo.jpg" alt="Seu Pendrive Atualizado" width="64" height="64" loading="lazy">
       <p>Repertório atualizado para paredão, som automotivo, festas e eventos.<br>Produto digital, entrega imediata.</p>
     </div>
 

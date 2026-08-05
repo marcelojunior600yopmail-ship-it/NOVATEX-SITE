@@ -145,7 +145,30 @@
     });
   }
 
-  /* ====================== 6. LIGHTBOX ====================== */
+  /* ====================== 6. EQUALIZADOR ======================
+     As barras atrás da logo, como as da própria marca. Cada uma tem altura,
+     ritmo e atraso próprios, senão vira uma onda certinha demais. */
+  function equalizador() {
+    var caixa = $('#eq');
+    if (!caixa) return;
+
+    if (reduzido) { caixa.hidden = true; return; }
+
+    var barras = 26;
+    var html = '';
+    for (var i = 0; i < barras; i++) {
+      // altura entre 18% e 100%, com as do meio mais altas
+      var centro = 1 - Math.abs(i - (barras - 1) / 2) / ((barras - 1) / 2);
+      var alt = 18 + centro * 55 + Math.random() * 27;
+      var dur = 0.7 + Math.random() * 0.9;
+      var atraso = Math.random() * 1.2;
+      html += '<i style="--h:' + alt.toFixed(0) + '%;--d:' + dur.toFixed(2) +
+              's;--t:-' + atraso.toFixed(2) + 's"></i>';
+    }
+    caixa.innerHTML = html;
+  }
+
+  /* ====================== 7. LIGHTBOX ====================== */
   function lightbox() {
     var caixa = $('#lightbox');
     var img = $('#lb-img');
@@ -195,6 +218,7 @@
     nav();
     reveals();
     stepper();
+    equalizador();
     lightbox();
 
     var ano = $('#ano');
