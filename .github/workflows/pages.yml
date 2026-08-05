@@ -1,0 +1,59 @@
+# ==========================================================================
+# Publica o site no GitHub Pages a cada push na main.
+#
+# A raiz do endereço abre a loja do Repertório Atualizado e o site da
+# Novatex fica em /novatex.html — mesma organização do vercel.json, para os
+# dois lugares se comportarem igual.
+#
+# Isto não atrapalha a Vercel: os dois podem conviver, publicando do mesmo
+# repositório ao mesmo tempo.
+# ==========================================================================
+name: Publicar site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  montar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Montar a pasta do site
+        run: |
+          mkdir -p _site
+          cp -r assets css js _site/
+          cp repertorio.html sucesso.html _site/
+          cp repertorio.html _site/index.html   # a raiz abre a loja
+          cp index.html _site/novatex.html      # o site da Novatex
+          touch _site/.nojekyll                 # não processar com Jekyll
+          ls -R _site | head -40
+
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  publicar:
+    needs: montar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4
